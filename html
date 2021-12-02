@@ -7,8 +7,48 @@
     <title>Document</title>
 
     <style>
+      /* ==== SCREENS BELOW 600px ==== */
+      @media only screen and (max-width: 600px) {
+        .desktop {
+          display: none !important;
+          visibility: hidden !important;
+        }
+
+        .cta a {
+          background-color: #26abc8 !important;
+          color: #ffffff !important;
+          padding: 15px 20px;
+          border-radius: 15px;
+          text-decoration: none;
+        }
+
+        .email-background {
+          background-color: #23454f !important;
+          padding: 20px 5px 50px 5px;
+          width: 100%;
+        }
+
+        .footer {
+          background-color: #23454f !important;
+        }
+
+        .footer, a {
+          color: #ffffff !important;
+        }
+      }
+
+      /* ==== SCREENS ABOVE 600px ==== */
+
+      @media only screen and (min-width: 600px) {
+        .smartphone {
+          display: none !important;
+          visibility: hidden !important;
+        }
+      }
+
+      /* ========= CSS ========= */
       .email-background {
-        background-color: #ffc801;
+        background-color: #e67c3042;
         font-family: sans-serif;
         padding: 20px 5px 50px 5px;
         width: 100%;
@@ -27,16 +67,15 @@
         padding: 0px 20px 20px 20px;
       }
 
-      .cta a{
-        background-color: #FF1B72;
-        color: #ffffff;
+      .cta a {
+        background-color: #f6ec58f3;
+        color: #000000;
         padding: 15px 20px;
         border-radius: 15px;
         text-decoration: none;
-
       }
 
-      img{
+      img {
         width: 100%;
         max-width: 600px;
         padding: 0px 0px;
@@ -44,31 +83,55 @@
         border-top-left-radius: 15px;
       }
 
-      .footer, a{
+      .footer,
+      a {
         margin: 0 auto;
         text-align: center;
         text-decoration: none;
-        color:black;
+        color: black;
         font-size: 10px;
         padding: 15px 0px;
       }
 
+      .footer {
+        background-color: #e67c3042;
+        width: 100%;
+      }
     </style>
   </head>
   <body>
     <div class="email-background">
       <div class="email-container">
-        <img src="https://i.imgur.com/qZKfEhL.jpg" />
-        <h2>Hello new user</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-          temporibus repellat officia culpa eligendi facilis assumenda quas
-          vero, numquam eveniet voluptate doloremque, dolore rem ab placeat hic
-          quod. Natus, est!
-        </p>
-        <div class="cta">
-          <a href="">Go shopping</a>
+        <!-- MOBILE VIEW -->
+        <div class="smartphone" style="padding: 0px 0px 40px 0px">
+          <!-- START OF PRODUCT DESCRIPTION -->
+
+          <!-- Hero Img-->
+          <img src="https://i.imgur.com/zvFtGsX.jpg" />
+          <h2>This App is Perfect for Smartphones</h2>
+          <p>
+            We are cross-platform, multi-language and work great on small
+            screens
+          </p>
+          <div class="cta">
+            <a href="">Get the App!</a>
+          </div>
         </div>
+        <!-- END OF PRODUCT DESCRIPTION -->
+
+        <!-- DESKTOP VIEW -->
+        <div class="desktop">
+          <!-- START OF PRODUCT DESCRIPTION -->
+
+          <!-- Hero Img-->
+          <img src="https://i.imgur.com/9c9fLIr.jpg" />
+          <h2>This App is Perfect for Desktops</h2>
+          <p>Responsive design optimized for big screens</p>
+          <div class="cta">
+            <a href="">Get the App!</a>
+          </div>
+        </div>
+        <!-- END OF PRODUCT DESCRIPTION -->
       </div>
     </div>
 
